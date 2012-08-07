@@ -1,0 +1,82 @@
+! URxvt.foreground: white
+URxvt.font: -*-terminus-*-*-*-*-140-*-*-*-*-iso8859-1
+
+URxvt.depth: 32
+
+! transparent
+URxvt*background: rgba:0000/0000/0000/cccc
+
+URxvt.saveLines: 5000
+URxvt.scrollBar: false
+
+! Normal
+! color0    black
+! color1    red
+! color2    green
+! color3    yellow
+! color4    blue
+! color5    purple
+! color6    cyan
+! color7    white
+
+! Light
+! color8    black
+! color9    red
+! color10    green
+! color11    yellow
+! color12    blue
+! color13    purple
+! color14    cyan
+! color15    white
+
+! Light color scheme
+
+! URxvt.foreground: #1e90ff
+
+! urxvt*color0:    #6c6c6c
+! urxvt*color1:    #e9897c
+! urxvt*color2:    #b6e77d
+! urxvt*color3:    #ecebbe
+! urxvt*color4:    #a9cdeb
+! urxvt*color5:    #ea96eb
+! urxvt*color6:    #c9caec
+! urxvt*color7:    #f2f2f2
+
+! urxvt*color8:    #747474
+! urxvt*color9:    #f99286
+! urxvt*color10:    #c3f786
+! urxvt*color11:    #fcfbcc
+! urxvt*color12:    #b6defb
+! urxvt*color13:    #fba1fb
+! urxvt*color14:    #d7d9fc
+! urxvt*color15:    #e2e2e2
+
+URxvt.foreground: white
+
+! urxvt*color0:    rgb:4f/4f/4f
+urxvt*color1:    rgb:85/0d/0d
+urxvt*color2:    rgb:88/be/32
+urxvt*color3:    rgb:ff/7e/00
+urxvt*color4:    rgb:32/4c/80
+urxvt*color5:    rgb:70/6c/9a
+urxvt*color6:    rgb:92/b1/9e
+! urxvt*color7:    rgb:00/00/00
+
+! urxvt*color8:    rgb:fa/fa/fa
+urxvt*color9:    rgb:25/25/25
+urxvt*color10:   rgb:98/2b/2b
+urxvt*color11:   rgb:fa/d4/3d
+urxvt*color12:   rgb:2b/4f/98
+urxvt*color13:   rgb:82/6a/b1
+urxvt*color14:   rgb:a1/cd/cd
+! urxvt*color15:   rgb:00/00/00
+
+URxvt*cutchars: `"()'*<>[]{|}
+
+urxvt*perl-lib: /usr/lib/urxvt/perl/
+urxvt*perl-ext-common:  default,matcher
+urxvt*matcher.button:   1
+urxvt*urlLauncher:  /usr/bin/chromium
+
+! set bell to allow xmonad notifications for irssi
+URxvt.urgentOnBell: true
