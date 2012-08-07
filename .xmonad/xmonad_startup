@@ -1,0 +1,6 @@
+#! /bin/bash
+# Startup programs for xmonad
+
+#urxvt -name irssi -e irssi_tmux &
+google-music-chromium &
+chromium -app=http://piazza.com/class

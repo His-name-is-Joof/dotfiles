@@ -1,0 +1,40 @@
+#!/bin/bash
+      ###########################################
+      # Copyright (C) 2005 Patrick A. Read
+      #
+      # This script toggles muting the playback
+      # of the Master volume device in alsamixer.
+      # Usage: mute (no arguments) - the mute
+      # state is TOGGLED by successively running
+      # this script.  The volume level of the
+      # Master control is saved to a temp file
+      # (see script for details) so that when mute
+      # is run again, the prior volume level is 
+      # restored.  If this temp file does not exist 
+      # when the user unmutes using this script, 
+      # then I found a default value of 22 (on a
+      # 0-31 scale) to be a comfortable level.
+      # Feel free to vary this to your liking.
+      ###########################################
+      declare -r TEMPVOLFILE="/tmp/volume.tmp"
+      declare -r CURRENTVOLUME=$(amixer get Master | grep \
+       'Front Left:' | cut -d' ' -f6)
+      declare -i NEWVOLUME
+
+      if [ "${CURRENTVOLUME}" == "0" ]
+      then
+       if [ -f ${TEMPVOLFILE} ]
+       then
+        NEWVOLUME=$(cat ${TEMPVOLFILE})
+       else
+        NEWVOLUME=22
+       fi
+       amixer set Master ${NEWVOLUME}
+      else
+       echo ${CURRENTVOLUME} > ${TEMPVOLFILE}
+       amixer set Master 0
+      fi
+      exit 0
+      ###########################################
+      # end of mute script
+      ###########################################
